@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# React Currency Converter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Project Overview
 
-## Available Scripts
+This project is a real-time currency converter application built using React.
+It demonstrates practical implementation of API integration, state management, performance optimization, and error handling.
 
-In the project directory, you can run:
+The application allows users to convert currencies dynamically using live exchange rates fetched from a public API. It also includes periodic data refreshing to simulate real-time updates.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧱 Application Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The application is divided into the following tasks:
 
-### `npm test`
+### Core Components
+* Converter Component
+ - Handles the main conversion logic, user input, and displays results.
+* CurrencySelect Component
+ - Reusable dropdown component for selecting currencies. Optimized using memoization to prevent unnecessary re-renders.
+* ErrorMessage Component
+ - Displays API errors in a clean and user-friendly way.    
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Custom Hooks
+* Dynamically displays the current date and time.
+* Uses JavaScript functions inside JSX.
 
-### `npm run build`
+### Task 3 – Dynamic Greeting
+* useExchangeRates
+* Responsible for fetching exchange rate data from the API.
+ - Fetches data on component mount
+ - Refreshes data every 60 seconds
+ - Handles loading and error states
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Context API
+* CurrencyContext
+ - Manages global state for user preferences such as default currencies.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Styling & Design Approach
+* Simple and clean UI design.
+* CSS used for layout and basic styling.
+* Focus on functionality over heavy design.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📱 Responsiveness
+* Basic responsive layout using CSS.
+* Works across different screen sizes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🌟 Key Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* 🔌 API Integration
+ - Dynamically updates rates based on selected base currency
+ - Uses the Frankfurter API for real-time exchange rates
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* 🔄 Real-Time Updates
+ - Automatically refreshes exchange rates every 60 seconds
 
-## Learn More
+* 🎛️ State Management
+ - useState for local component state (amount, selected currencies)
+ - Context API for global preferences
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* 🖥️ User Interface
+ - Two dropdowns for selecting currencies
+ - Input field for entering amount
+ - Real-time converted output display
+ - Displays current exchange rate
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* ⚡ Performance Optimization
+ - useMemo for optimized conversion calculations
+ - React.memo to avoid unnecessary component re-renders
 
-### Code Splitting
+* ⚠️ Error Handling
+ - Handles API failures gracefully
+ - Displays meaningful error messages to users
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🚀 How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* User enters an amount
+* Selects source and target currencies
+* Application fetches latest exchange rates
+* Conversion is calculated instantly
+* Result and exchange rate are displayed
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🗂 Repository Structure
+* Each task is implemented as a separate component.
+* App.js acts as the main entry point.
 
-### Advanced Configuration
+The project follows the Git workflow:  
+`dev` → `stage` → `main`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🚀 Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* React (Functional Components)
+* JavaScript (ES6+)
+* Context API
+* Fetch API
+* CSS
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ▶️ Getting Started
+1. Install Dependencies
+npm install
+2. Run the Application
+npm run dev
+3. Open in Browser
+http://localhost:5173
+
+---
+
+## 🔗 Connect With Me
+- LinkedIn: [www.linkedin.com/in/yaminimishra0804](https://www.linkedin.com/in/yaminimishra0804)  
+- GitHub: [https://github.com/yaminimishra08](https://github.com/yaminimishra08)
+
+---
+
+## 📎 Submission
+* This currency converter is a practical implementation of modern React concepts.
+* It balances functionality, performance, and clean architecture, making it a solid example of a production-style React application.
+* The project follows the Git workflow: `dev → stage → main`.
