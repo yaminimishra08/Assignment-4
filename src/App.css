@@ -1,38 +1,102 @@
-.App {
+/* Set all the coommon changes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* first div inside body */
+body > div {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Title */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1e3c72;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type="number"]:focus {
+  border-color: #1e3c72;
+}
+
+/* Dropdowns */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+select:focus {
+  border-color: #1e3c72;
+}
+
+/* Second div - dropdown container */
+div > div:nth-of-type(2) {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Arrow */
+span {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Result */
+h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2a5298;
+}
+
+/* Exchange rate */
+p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Error */
+p:first-of-type {
+  color: #d32f2f;
+  background: #fdecea;
+  padding: 8px;
+  border-radius: 5px;
 }

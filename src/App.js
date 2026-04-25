@@ -1,10 +1,12 @@
+import React from "react";
 import Converter from "./components/Converter";
+import { CurrencyProvider } from "./context/CurrencyContext";
 
 function App() {
   return (
-    <div className="app">
+    <CurrencyProvider>
       <Converter />
-    </div>
+    </CurrencyProvider>
   );
 }
 
